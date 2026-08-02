@@ -5,6 +5,12 @@
       "name": "dev",
       "path": "dev/",
       "kind": "dev"
+    },
+    {
+      "name": "v0.0.1rc1",
+      "path": "v0.0.1rc1/",
+      "kind": "release",
+      "stable": false
     }
   ]
 }
