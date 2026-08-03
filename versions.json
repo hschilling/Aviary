@@ -1,10 +1,16 @@
 {
-  "latest": null,
+  "latest": "v99.0.0",
   "versions": [
     {
       "name": "dev",
       "path": "dev/",
       "kind": "dev"
+    },
+    {
+      "name": "v99.0.0",
+      "path": "v99.0.0/",
+      "kind": "release",
+      "stable": true
     },
     {
       "name": "v0.0.1rc1",
