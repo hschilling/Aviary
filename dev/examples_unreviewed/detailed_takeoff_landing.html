@@ -64,7 +64,7 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'examples_unreviewed/detailed_takeoff_landing';</script>
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
-    <script src="../_static/version_switcher.js?v=a5d85598"></script>
+    <script src="../_static/version_switcher.js?v=cdb420d3"></script>
     <script src="../_static/collapsible_headers.js?v=13c9d35c"></script>
     <link rel="icon" href="../_static/aviary_logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -998,13 +998,6 @@ P1 and P2 correspond to microphone locations for acoustic certification.</p>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/runner/work/Aviary/Aviary/.openmdao-pixi/.pixi/envs/py313/lib/python3.13/site-packages/openmdao/utils/reports_system.py:618: OpenMDAOWarning:Error loading report plugins: A report with the name list_options was already registered.
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1785717186.619889] [runnervmvrwv9:4481 :0]        ib_iface.c:1269 UCX  ERROR mana_0: iface 0x55acdbaa4130 failed to create UD QP TX wr:256 sge:6 inl:64 resp:0 RX wr:4096 sge:1 resp:0 failed: Operation not supported
-[1785717186.620200] [runnervmvrwv9:4481 :0]      ucp_worker.c:1412 UCX  ERROR uct_iface_open(ud_verbs/mana_0:1) failed: Input/output error
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[runnervmvrwv9:04481] pml_ucx.c:313  Error: Failed to create UCP worker
-</pre></div>
-</div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/runner/work/Aviary/Aviary/.openmdao-pixi/.pixi/envs/py313/lib/python3.13/site-packages/openmdao/core/driver.py:1414: DriverWarning:ScipyOptimizeDriver: constraint(s) [&#39;mission:constraints:excess_fuel_mass_capacity&#39;] do not depend on any design variables. Please check your problem formulation.
 </pre></div>
 </div>
@@ -1013,10 +1006,10 @@ P1 and P2 correspond to microphone locations for acoustic certification.</p>
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Inequality constraints incompatible    (Exit mode 4)
-            Current function value: 3.4836839366388848
-            Iterations: 5
-            Function evaluations: 12
-            Gradient evaluations: 5
+            Current function value: 3.4835992110691514
+            Iterations: 3
+            Function evaluations: 3
+            Gradient evaluations: 3
 Optimization FAILED.
 Inequality constraints incompatible
 -----------------------------------
@@ -1039,7 +1032,7 @@ Aviary run failed. See the dashboard for more details.
 </div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;P1&#39;: {&#39;thrust_fraction&#39;: np.float64(0.7198745837954412), &#39;true_airspeed&#39;: np.float64(210.7778649750448), &#39;angle_of_attack&#39;: np.float64(3.144427873714732), &#39;flight_path_angle&#39;: np.float64(4.315848190262748), &#39;altitude&#39;: np.float64(1199.9999999200777), &#39;distance&#39;: np.float64(21325.000000121818)}, &#39;P2&#39;: {&#39;thrust_fraction&#39;: np.float64(0.9560050658629121), &#39;true_airspeed&#39;: np.float64(197.74071309401774), &#39;angle_of_attack&#39;: np.float64(4.189543868898658), &#39;flight_path_angle&#39;: np.float64(5.380960721477241), &#39;altitude&#39;: np.float64(985.0), &#39;distance&#39;: np.float64(13927.781908394736)}}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;P1&#39;: {&#39;thrust_fraction&#39;: np.float64(0.4056450160483544), &#39;true_airspeed&#39;: np.float64(162.3492406771041), &#39;angle_of_attack&#39;: np.float64(8.651832490192263), &#39;flight_path_angle&#39;: np.float64(4.315849634143981), &#39;altitude&#39;: np.float64(1200.0), &#39;distance&#39;: np.float64(21325.0)}, &#39;P2&#39;: {&#39;thrust_fraction&#39;: np.float64(0.9388234153561069), &#39;true_airspeed&#39;: np.float64(197.75144753054684), &#39;angle_of_attack&#39;: np.float64(4.193846719862938), &#39;flight_path_angle&#39;: np.float64(5.244051381785041), &#39;altitude&#39;: np.float64(985.0), &#39;distance&#39;: np.float64(14186.19424914243)}}
 </pre></div>
 </div>
 </div>
@@ -1267,9 +1260,6 @@ Aviary run failed. See the dashboard for more details.
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;P3&#39;: {&#39;thrust_fraction&#39;: np.float64(0.12487062901990771), &#39;true_airspeed&#39;: np.float64(99.07776305076794), &#39;angle_of_attack&#39;: np.float64(7.688822513312926), &#39;flight_path_angle&#39;: np.float64(-3.0338377555110094), &#39;altitude&#39;: np.float64(394.0), &#39;distance&#39;: np.float64(1999.9999999999998)}}
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
