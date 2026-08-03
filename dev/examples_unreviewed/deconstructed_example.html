@@ -64,7 +64,7 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'examples_unreviewed/deconstructed_example';</script>
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
-    <script src="../_static/version_switcher.js?v=cc06ef2e"></script>
+    <script src="../_static/version_switcher.js?v=a5d85598"></script>
     <script src="../_static/collapsible_headers.js?v=13c9d35c"></script>
     <link rel="icon" href="../_static/aviary_logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -1370,7 +1370,12 @@ They can use the complete set of Aviary’s methods, functionalities, and classe
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/runner/work/Aviary/Aviary/.openmdao-pixi/.pixi/envs/py313/lib/python3.13/site-packages/openmdao/utils/reports_system.py:618: OpenMDAOWarning:Error loading report plugins: A report with the name list_options was already registered.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning: Invalid options for non-optimal control &#39;mach&#39; in phase &#39;climb&#39;: lower, upper, ref
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1785717171.282008] [runnervmvrwv9:4453 :0]        ib_iface.c:1269 UCX  ERROR mana_0: iface 0x555d0e0b99d0 failed to create UD QP TX wr:256 sge:6 inl:64 resp:0 RX wr:4096 sge:1 resp:0 failed: Operation not supported
+[1785717171.282298] [runnervmvrwv9:4453 :0]      ucp_worker.c:1412 UCX  ERROR uct_iface_open(ud_verbs/mana_0:1) failed: Input/output error
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[runnervmvrwv9:04453] pml_ucx.c:313  Error: Failed to create UCP worker
+Warning: Invalid options for non-optimal control &#39;mach&#39; in phase &#39;climb&#39;: lower, upper, ref
 
 Warning: Invalid options for non-optimal control &#39;altitude&#39; in phase &#39;climb&#39;: lower, upper, ref
 
@@ -1401,12 +1406,12 @@ Total number of inequality constraints...............:       61
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of Iterations....: 15
 
                                    (scaled)                 (unscaled)
-Objective...............:   1.3234421093809157e+00    1.3234421093809157e+00
-Dual infeasibility......:   3.6141697458511434e-08    3.6141697458511434e-08
+Objective...............:   1.3234421093809317e+00    1.3234421093809317e+00
+Dual infeasibility......:   3.6141994026837973e-08    3.6141994026837973e-08
 Constraint violation....:   2.2737367544323207e-14    2.2737367544323207e-14
 Variable bound violation:   0.0000000000000000e+00    0.0000000000000000e+00
-Complementarity.........:   9.0924048114284242e-08    9.0924048114284242e-08
-Overall NLP error.......:   9.0924048114284242e-08    9.0924048114284242e-08
+Complementarity.........:   9.0924048114257468e-08    9.0924048114257468e-08
+Overall NLP error.......:   9.0924048114257468e-08    9.0924048114257468e-08
 
 
 Number of objective function evaluations             = 16
@@ -1416,7 +1421,7 @@ Number of inequality constraint evaluations          = 16
 Number of equality constraint Jacobian evaluations   = 16
 Number of inequality constraint Jacobian evaluations = 16
 Number of Lagrangian Hessian evaluations             = 0
-Total seconds in IPOPT                               = 7.269
+Total seconds in IPOPT                               = 5.177
 
 EXIT: Optimal Solution Found.
 
