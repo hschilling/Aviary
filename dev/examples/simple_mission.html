@@ -64,7 +64,7 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'examples/simple_mission';</script>
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
-    <script src="../_static/version_switcher.js?v=cdb420d3"></script>
+    <script src="../_static/version_switcher.js?v=5d6b3312"></script>
     <script src="../_static/collapsible_headers.js?v=13c9d35c"></script>
     <link rel="icon" href="../_static/aviary_logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -679,7 +679,10 @@ This command needs the name of the aircraft csv file and phase_info file. Becaus
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/runner/work/Aviary/Aviary/.openmdao-pixi/.pixi/envs/py313/lib/python3.13/site-packages/openmdao/utils/reports_system.py:618: OpenMDAOWarning:Error loading report plugins: A report with the name list_options was already registered.
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Traceback (most recent call last):
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1785721040.063276] [runnervmvrwv9:4256 :0]        ib_iface.c:1269 UCX  ERROR mana_0: iface 0x558bed4123a0 failed to create UD QP TX wr:256 sge:6 inl:64 resp:0 RX wr:4096 sge:1 resp:0 failed: Operation not supported
+[1785721040.063569] [runnervmvrwv9:4256 :0]      ucp_worker.c:1412 UCX  ERROR uct_iface_open(ud_verbs/mana_0:1) failed: Input/output error
+[runnervmvrwv9:04256] pml_ucx.c:313  Error: Failed to create UCP worker
+Traceback (most recent call last):
   File <span class=" -Color -Color-Magenta">&quot;/home/runner/work/Aviary/Aviary/.openmdao-pixi/.pixi/envs/py313/bin/aviary&quot;</span>, line <span class=" -Color -Color-Magenta">6</span>, in <span class=" -Color -Color-Magenta">&lt;module&gt;</span>
     sys.exit(<span class=" -Color -Color-Red">aviary_cmd</span><span class=" -Color -Color-Bold -Color-Bold-Red">()</span>)
              <span class=" -Color -Color-Red">~~~~~~~~~~</span><span class=" -Color -Color-Bold -Color-Bold-Red">^^</span>
@@ -757,6 +760,11 @@ This command needs the name of the aircraft csv file and phase_info file. Becaus
 </div>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/runner/work/Aviary/Aviary/.openmdao-pixi/.pixi/envs/py313/lib/python3.13/site-packages/openmdao/utils/reports_system.py:618: OpenMDAOWarning:Error loading report plugins: A report with the name list_options was already registered.
+[runnervmvrwv9:04238] pml_ucx.c:313  Error: Failed to create UCP worker
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1785721041.800915] [runnervmvrwv9:4238 :0]        ib_iface.c:1269 UCX  ERROR mana_0: iface 0x561a46a14fd0 failed to create UD QP TX wr:256 sge:6 inl:64 resp:0 RX wr:4096 sge:1 resp:0 failed: Operation not supported
+[1785721041.801217] [runnervmvrwv9:4238 :0]      ucp_worker.c:1412 UCX  ERROR uct_iface_open(ud_verbs/mana_0:1) failed: Input/output error
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total number of variables............................:       96
@@ -773,12 +781,12 @@ Total number of inequality constraints...............:       61
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of Iterations....: 15
 
                                    (scaled)                 (unscaled)
-Objective...............:   1.3813949090359181e+00    1.3813949090359181e+00
-Dual infeasibility......:   3.1079082173174420e-08    3.1079082173174420e-08
-Constraint violation....:   5.6421215025104165e-15    5.6421215025104165e-15
+Objective...............:   1.3813949090359210e+00    1.3813949090359210e+00
+Dual infeasibility......:   3.1079079848644909e-08    3.1079079848644909e-08
+Constraint violation....:   8.0395019596141660e-15    8.0395019596141660e-15
 Variable bound violation:   0.0000000000000000e+00    0.0000000000000000e+00
-Complementarity.........:   9.0922309819264753e-08    9.0922309819264753e-08
-Overall NLP error.......:   9.0922309819264753e-08    9.0922309819264753e-08
+Complementarity.........:   9.0922309819268128e-08    9.0922309819268128e-08
+Overall NLP error.......:   9.0922309819268128e-08    9.0922309819268128e-08
 
 
 Number of objective function evaluations             = 16
@@ -788,7 +796,7 @@ Number of inequality constraint evaluations          = 16
 Number of equality constraint Jacobian evaluations   = 16
 Number of inequality constraint Jacobian evaluations = 16
 Number of Lagrangian Hessian evaluations             = 0
-Total seconds in IPOPT                               = 7.028
+Total seconds in IPOPT                               = 5.060
 
 EXIT: Optimal Solution Found.
 

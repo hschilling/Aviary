@@ -64,7 +64,7 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'examples_unreviewed/more_advanced_example';</script>
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
-    <script src="../_static/version_switcher.js?v=cdb420d3"></script>
+    <script src="../_static/version_switcher.js?v=5d6b3312"></script>
     <script src="../_static/collapsible_headers.js?v=13c9d35c"></script>
     <link rel="icon" href="../_static/aviary_logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -705,7 +705,14 @@ Later in this example, we increase this order which will allow the optimizer to 
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/runner/work/Aviary/Aviary/.openmdao-pixi/.pixi/envs/py313/lib/python3.13/site-packages/openmdao/utils/reports_system.py:618: OpenMDAOWarning:Error loading report plugins: A report with the name list_options was already registered.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning: No input value found for Aircraft.Design.TYPE. Assuming the aircraft is of type: AircraftTypes.TRANSPORT.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1785721106.652753] [runnervmvrwv9:4343 :0]        ib_iface.c:1269 UCX  ERROR mana_0: iface 0x5561d529d930 failed to create UD QP TX wr:256 sge:6 inl:64 resp:0 RX wr:4096 sge:1 resp:0 failed: Operation not supported
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1785721106.653061] [runnervmvrwv9:4343 :0]      ucp_worker.c:1412 UCX  ERROR uct_iface_open(ud_verbs/mana_0:1) failed: Input/output error
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[runnervmvrwv9:04343] pml_ucx.c:313  Error: Failed to create UCP worker
+Warning: No input value found for Aircraft.Design.TYPE. Assuming the aircraft is of type: AircraftTypes.TRANSPORT.
 
 Warning: No input value found for Aircraft.HorizontalTail.NUM_TAILS. Assuming there is 1 horizontal tail.
 </pre></div>
@@ -728,12 +735,12 @@ Total number of inequality constraints...............:       27
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of Iterations....: 22
 
                                    (scaled)                 (unscaled)
-Objective...............:   2.5497020995242812e+00    2.5497020995242812e+00
-Dual infeasibility......:   1.7762096297796721e-08    1.7762096297796721e-08
-Constraint violation....:   8.3066727778208862e-15    8.3066727778208862e-15
+Objective...............:   2.5497020995242727e+00    2.5497020995242727e+00
+Dual infeasibility......:   1.7762094105114692e-08    1.7762094105114692e-08
+Constraint violation....:   7.4646550380761436e-15    7.4646550380761436e-15
 Variable bound violation:   0.0000000000000000e+00    0.0000000000000000e+00
-Complementarity.........:   9.0944744385282368e-08    9.0944744385282368e-08
-Overall NLP error.......:   9.0944744385282368e-08    9.0944744385282368e-08
+Complementarity.........:   9.0944744385294809e-08    9.0944744385294809e-08
+Overall NLP error.......:   9.0944744385294809e-08    9.0944744385294809e-08
 
 
 Number of objective function evaluations             = 28
@@ -743,7 +750,7 @@ Number of inequality constraint evaluations          = 28
 Number of equality constraint Jacobian evaluations   = 24
 Number of inequality constraint Jacobian evaluations = 24
 Number of Lagrangian Hessian evaluations             = 0
-Total seconds in IPOPT                               = 8.064
+Total seconds in IPOPT                               = 6.101
 
 EXIT: Optimal Solution Found.
 
@@ -799,7 +806,7 @@ However, we see that the optimizer chose to decrease the Mach number during the 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10204.47707117196
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10204.47707117192
 </pre></div>
 </div>
 </div>
@@ -812,7 +819,7 @@ However, we see that the optimizer chose to decrease the Mach number during the 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>22497.02099524284
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>22497.020995242754
 </pre></div>
 </div>
 </div>
@@ -913,12 +920,12 @@ Total number of inequality constraints...............:       27
 Number of Iterations....: 22
 
                                    (scaled)                 (unscaled)
-Objective...............:   2.5637089674782128e+00    2.5637089674782128e+00
-Dual infeasibility......:   3.9054363541556054e-08    3.9054363541556054e-08
-Constraint violation....:   8.2863706881042525e-15    8.2863706881042525e-15
+Objective...............:   2.5637089674782327e+00    2.5637089674782327e+00
+Dual infeasibility......:   3.9054360169235498e-08    3.9054360169235498e-08
+Constraint violation....:   1.0099506048308745e-14    1.0099506048308745e-14
 Variable bound violation:   0.0000000000000000e+00    0.0000000000000000e+00
-Complementarity.........:   9.0971568541571899e-08    9.0971568541571899e-08
-Overall NLP error.......:   9.0971568541571899e-08    9.0971568541571899e-08
+Complementarity.........:   9.0971568541595418e-08    9.0971568541595418e-08
+Overall NLP error.......:   9.0971568541595418e-08    9.0971568541595418e-08
 
 
 Number of objective function evaluations             = 28
@@ -928,7 +935,7 @@ Number of inequality constraint evaluations          = 28
 Number of equality constraint Jacobian evaluations   = 24
 Number of inequality constraint Jacobian evaluations = 24
 Number of Lagrangian Hessian evaluations             = 0
-Total seconds in IPOPT                               = 7.579
+Total seconds in IPOPT                               = 5.840
 
 EXIT: Optimal Solution Found.
 </pre></div>
@@ -953,7 +960,7 @@ Let’s take a look at the fuel burn value:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10268.01115548694
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10268.011155487033
 </pre></div>
 </div>
 </div>
@@ -1005,30 +1012,7 @@ Total number of inequality constraints...............:       27
         inequality constraints with only upper bounds:        0
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of Iterations....: 50
-
-                                   (scaled)                 (unscaled)
-Objective...............:   2.5117428911853352e+00    2.5117428911853352e+00
-Dual infeasibility......:   2.9540184788234289e-03    2.9540184788234289e-03
-Constraint violation....:   8.3009804003223971e-04    8.3009804003223971e-04
-Variable bound violation:   0.0000000000000000e+00    0.0000000000000000e+00
-Complementarity.........:   1.0002893841349874e-05    1.0002893841349874e-05
-Overall NLP error.......:   2.9540184788234289e-03    2.9540184788234289e-03
-
-
-Number of objective function evaluations             = 69
-Number of objective gradient evaluations             = 51
-Number of equality constraint evaluations            = 69
-Number of inequality constraint evaluations          = 69
-Number of equality constraint Jacobian evaluations   = 51
-Number of inequality constraint Jacobian evaluations = 51
-Number of Lagrangian Hessian evaluations             = 0
-Total seconds in IPOPT                               = 19.332
-
-EXIT: Maximum Number of Iterations Exceeded.
-
-
-Optimization Problem -- Optimization using pyOpt_sparse
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Optimization Problem -- Optimization using pyOpt_sparse
 ================================================================================
     Objective Function: _objfunc
 
@@ -1045,7 +1029,7 @@ Optimization Problem -- Optimization using pyOpt_sparse
       Index  Name                                                   Type          Lower           Value           Upper    Status  Lagrange Multiplier (N/A)
           7  traj.climb_1.collocation_constraint.defects:mass          e   0.000000E+00    4.624204E-05    0.000000E+00         E    9.00000E+100
           8  traj.climb_1.collocation_constraint.defects:mass          e   0.000000E+00    4.250165E-05    0.000000E+00         E    9.00000E+100
-          9  traj.climb_1.collocation_constraint.defects:mass          e   0.000000E+00    1.314141E-04    0.000000E+00         E    9.00000E+100
+          9  traj.climb_1.collocation_constraint.defects:mass          e   0.000000E+00    1.314142E-04    0.000000E+00         E    9.00000E+100
          10  traj.climb_1.collocation_constraint.defects:mass          e   0.000000E+00    3.006290E-05    0.000000E+00         E    9.00000E+100
          11  traj.climb_1.collocation_constraint.defects:mass          e   0.000000E+00   -2.171195E-06    0.000000E+00         E    9.00000E+100
          12  traj.climb_1.collocation_constraint.defects:mass          e   0.000000E+00   -2.167604E-06    0.000000E+00         E    9.00000E+100
@@ -1066,6 +1050,28 @@ Optimization Problem -- Optimization using pyOpt_sparse
          61  traj.descent_1.collocation_constraint.defects:distance    e   0.000000E+00   -7.332919E-05    0.000000E+00         E    9.00000E+100
          62  traj.descent_1.collocation_constraint.defects:distance    e   0.000000E+00   -4.262566E-05    0.000000E+00         E    9.00000E+100
          63  traj.descent_1.collocation_constraint.defects:distance    e   0.000000E+00   -7.515343E-06    0.000000E+00         E    9.00000E+100
+
+Number of Iterations....: 50
+
+                                   (scaled)                 (unscaled)
+Objective...............:   2.5117428911851838e+00    2.5117428911851838e+00
+Dual infeasibility......:   2.9540184765892820e-03    2.9540184765892820e-03
+Constraint violation....:   8.3009803999614781e-04    8.3009803999614781e-04
+Variable bound violation:   0.0000000000000000e+00    0.0000000000000000e+00
+Complementarity.........:   1.0002893841325447e-05    1.0002893841325447e-05
+Overall NLP error.......:   2.9540184765892820e-03    2.9540184765892820e-03
+
+
+Number of objective function evaluations             = 69
+Number of objective gradient evaluations             = 51
+Number of equality constraint evaluations            = 69
+Number of inequality constraint evaluations          = 69
+Number of equality constraint Jacobian evaluations   = 51
+Number of inequality constraint Jacobian evaluations = 51
+Number of Lagrangian Hessian evaluations             = 0
+Total seconds in IPOPT                               = 14.821
+
+EXIT: Maximum Number of Iterations Exceeded.
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning: 
@@ -1091,7 +1097,7 @@ Aviary run failed. See the dashboard for more details.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10032.296984901071
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10032.296984900398
 </pre></div>
 </div>
 </div>
